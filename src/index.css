@@ -5,9 +5,53 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.room {
+  height: 100vh;
+  width: 400vh;
+}
+
+.room > * {
+  margin: 0;
+  padding: 0;
+}
+
+#living-room {
+  background-image: url("img/bg/living_room.svg");
+}
+
+.scroll-btn {
+  height: 5vh;
+  width: 5vh;
+  position: fixed;
+  top: 47vh;
+  z-index: 100;
+  border-radius: 50%;
+  font-size: 4vh;
+  background: white;
+  border: none;
+  color: saddlebrown;
+}
+
+#forward {
+  right: 2vw
+}
+
+#backward {
+  transform: rotate(180deg);
+  left: 2vw
+}
+
+.slider {
+  background: black;
+  width: 50vw;
+  height: 50vh;
 }
